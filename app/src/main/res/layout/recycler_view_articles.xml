@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="article"
+            type="com.nhick.porcelain.repository.Articles" />
+
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="280dp"
+        android:layout_height="234dp"
+        android:layout_margin="8dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="7dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="8dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_articles"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rectangle_shape_article"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="1sp"
+                android:textColor="@color/md_white_1000"
+                android:textSize="9sp"
+                android:text="@{article.articleDate}"
+                app:layout_constraintBottom_toBottomOf="@id/image_view_articles"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="4 MAY 2018" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_article_head"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:letterSpacing="0.04"
+                android:lineSpacingExtra="8sp"
+                android:textColor="#595e60"
+                android:textSize="12sp"
+                android:text="@{article.articleTitle}"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_view_articles"
+                app:layout_constraintBottom_toTopOf="@id/text_view_body"
+                tools:text="TWO YEARS LATE BUT WE MADE THIS FOR YOU – HA+ HYDRATING SERUM" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:letterSpacing="0.04"
+                android:lineSpacingExtra="6sp"
+                android:textColor="#7f888b"
+                android:textSize="12sp"
+                android:maxLines="3"
+                android:text="@{article.articleBody}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_article_head"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="Our signature, award-winning bespoke
+            facial is designed for severely congested and acne-prone skin…" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>

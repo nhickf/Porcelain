@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/md_white_1000</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <style name="ButtonSocialLogin" parent="Widget.MaterialComponents.Button">
+
+        <item name="cornerRadius">7dp</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_margin">32dp</item>
+        <item name="android:background">@drawable/rectangle_button_shape</item>
+
+    </style>
+
+    <style name="TextViewLoginStyle" parent="Widget.AppCompat.TextView">
+
+        <item name="android:textColor">@color/md_white_1000</item>
+
+
+    </style>
+
+    <style name="BottomNavStyle" parent="Widget.Design.BottomNavigationView">
+
+        <item name="android:textAllCaps">true</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="android:labelTextSize">10sp</item>
+    </style>
+
+    <style name="AppbarStyle" parent="Widget.Design.AppBarLayout">
+
+        <item name="android:background">@color/md_white_1000</item>
+
+    </style>
+
+
+    <style name="ChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+            <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

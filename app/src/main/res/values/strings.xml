@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Porcelain</string>
+
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="enter_number_lbl">Enter your mobile number to continue.</string>
+    <string name="greetings_lbl">Hello there!</string>
+    <string name="number_hint">9XX XXX XXX</string>
+    <string name="option_login_lbl">Or continue with a social account</string>
+    <string name="facebook_lbl">Facebook</string>
+    <string name="google_lbl">Google</string>
+    <string name="version_number_lbl">Version 0.2 (7)</string>
+    <string name="continue_lbl">Continue</string>
+    <string name="home_lbl">HOME</string>
+    <string name="scan_qr_lbl">SCAN QR</string>
+    <string name="porcelain_lbl">PORCELAIN</string>
+    <string name="profile_lbl">PROFILE</string>
+    <string name="shop_lbl">SHOP</string>
+    <string name="news_lbl">News</string>
+    <string name="prologue_lbl">Prologue</string>
+    <string name="promotions_lbl">Promotions</string>
+</resources>

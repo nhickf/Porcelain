@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_home"
+        android:title="@string/home_lbl"
+        android:icon="@mipmap/home_enabled"/>
+
+    <item
+        android:id="@+id/action_scan"
+        android:title="@string/scan_qr_lbl"
+        android:icon="@mipmap/group_2"/>
+
+    <item
+        android:id="@+id/action_porcelain"
+        android:title="@string/porcelain_lbl"
+        android:icon="@mipmap/porcelain_icon"/>
+
+    <item
+        android:id="@+id/action_profile"
+        android:title="@string/profile_lbl"
+        android:icon="@mipmap/profile"/>
+
+    <item
+        android:id="@+id/action_shop"
+        android:title="@string/shop_lbl"
+        android:icon="@mipmap/shop"/>
+
+</menu>
