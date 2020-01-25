@@ -1,16 +1,20 @@
 package com.nhick.porcelain
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
+import android.util.Log
 import android.view.View
+import com.nhick.porcelain.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-class SplashScreenActivity : AppCompatActivity() {
+open class SplashScreenActivity : AppCompatActivity() {
 
     private val mHideHandler = Handler()
     private var mHidePart2Runnable : Runnable
@@ -51,6 +55,18 @@ class SplashScreenActivity : AppCompatActivity() {
         mVisible = true
 
         full_screen_container.setOnClickListener { toggle() }
+
+       object: CountDownTimer(3000,1000){
+           override fun onFinish() {
+               startActivity(Intent(this@SplashScreenActivity,LoginActivity::class.java))
+               finish()
+           }
+
+           override fun onTick(p0: Long) {
+               //Nothing to do
+               Log.e("OnTick",p0.toString())
+           }
+       }.start()
 
     }
 

@@ -30,9 +30,15 @@ class LoginPresenter(private val view:ILoginContract.View) : ILoginContract.Pres
 
     override fun onClick(ccp: CountryCodePicker): View.OnClickListener {
         return View.OnClickListener {
-            if (ccp.isValidFullNumber){
-                Log.e("Phone Number valid",true.toString())
-            }
+           validateNumber(ccp)
+        }
+    }
+
+    override fun validateNumber(ccp: CountryCodePicker){
+        if (ccp.isValidFullNumber){
+            view.onProceedToOTP()
+        }else{
+            view.onDisplayError("Invalid number")
         }
     }
 

@@ -17,6 +17,8 @@ interface ILoginContract {
 
         fun onProceedToDashboard()
 
+        fun onProceedToOTP()
+
     }
 
     interface Presenter{
@@ -24,6 +26,8 @@ interface ILoginContract {
        fun onTextChangeListener() : TextWatcher
 
        fun onClick(ccp : CountryCodePicker) : android.view.View.OnClickListener
+
+       fun validateNumber(ccp: CountryCodePicker)
 
        fun onClick() : android.view.View.OnClickListener
 

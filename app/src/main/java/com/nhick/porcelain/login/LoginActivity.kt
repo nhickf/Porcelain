@@ -1,13 +1,21 @@
 package com.nhick.porcelain.login
 
+import android.app.Dialog
+import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.transition.TransitionManager
 import android.util.Log
+import android.view.inputmethod.EditorInfo
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintSet
 import com.google.android.material.snackbar.Snackbar
+import com.nhick.porcelain.otp.OneTimePasswordActivity
 import com.nhick.porcelain.R
+import com.nhick.porcelain.Utility.Companion.NUMBER_CODE_KEY
+import com.nhick.porcelain.dashboard.DashboardActivity
 import kotlinx.android.synthetic.main.activity_initial_login.*
 
 class LoginActivity  :  ILoginContract.View , AppCompatActivity()  {
@@ -32,6 +40,18 @@ class LoginActivity  :  ILoginContract.View , AppCompatActivity()  {
         button_facebook.setOnClickListener(presenter.onClick())
 
         button_google.setOnClickListener(presenter.onClick())
+
+
+        edit_text_number.setOnEditorActionListener { textView, actionID, keyEvent ->
+            return@setOnEditorActionListener when (actionID) {
+                EditorInfo.IME_ACTION_GO -> {
+                    Log.e("editor","send")
+                    presenter.validateNumber(ccp)
+                    true
+                }
+                else -> false
+            }
+        }
 
     }
 
@@ -68,7 +88,26 @@ class LoginActivity  :  ILoginContract.View , AppCompatActivity()  {
     }
 
     override fun onProceedToDashboard() {
-        onDisplayError("Proceed to Dashboard")
+        startActivity(Intent(this,DashboardActivity::class.java))
+        finish()
+    }
+
+    override fun onProceedToOTP() {
+
+       val builder = AlertDialog.Builder(this,R.style.AlerDialogCustomStyle)
+            .setTitle("OTP Code")
+            .setMessage("You have successfully receive the OTP CODE : 1234")
+            .setCancelable(false)
+            .setPositiveButton("Confirm") { dialogInterface: DialogInterface, i: Int ->
+                val intent = Intent(this,
+                    OneTimePasswordActivity::class.java)
+                intent.putExtra(NUMBER_CODE_KEY,ccp.formattedFullNumber)
+                startActivity(intent)
+            }
+
+        builder.create()
+        builder.show()
+
     }
 
 }

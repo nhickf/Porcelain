@@ -16,7 +16,7 @@
         android:layout_marginEnd="151dp"
         android:gravity="center"
         android:keepScreenOn="true"
-        android:src="@mipmap/porcelain_logo"
+        android:src="@mipmap/porcelain_main"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,6 +30,7 @@
         android:layout_marginEnd="33dp"
         android:text="@string/greetings_lbl"
         android:textSize="30sp"
+        android:textStyle="bold"
         style="@style/TextViewLoginStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

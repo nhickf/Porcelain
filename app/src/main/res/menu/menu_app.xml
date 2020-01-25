@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@mipmap/notifications"
+        android:title="@string/notifications_lbl"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_message"
+        android:icon="@mipmap/chatbot"
+        android:title="@string/chatbot_lbl"
+        app:showAsAction="ifRoom"/>
+
+</menu>

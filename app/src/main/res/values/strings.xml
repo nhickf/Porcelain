@@ -20,4 +20,17 @@
     <string name="news_lbl">News</string>
     <string name="prologue_lbl">Prologue</string>
     <string name="promotions_lbl">Promotions</string>
+    <string name="article_of_the_week_lbl">Article of the week</string>
+    <string name="treatments_lbl">Treatments</string>
+    <string name="appointments_lbl">Appointments</string>
+    <string name="products_lbl">Products</string>
+    <string name="notifications_lbl">Notifications</string>
+    <string name="chatbot_lbl">Chatbot</string>
+    <string name="service_not_available">Service not available</string>
+    <string name="invalid_lat_long_used">Invalid coordinates</string>
+    <string name="no_address_found">No address found</string>
+    <string name="address_found">Address found</string>
+    <string name="enter_the_6_digit_code_sent_to_lbl">Enter the 6-digit code sent to:</string>
+    <string name="didn_t_receive_it_lbl">Didn’t receive it?</string>
+    <string name="resend_code_lbl">Resend Code</string>
 </resources>

@@ -8,6 +8,19 @@
         <item name="colorAccent">@color/md_white_1000</item>
     </style>
 
+    <style name="AlerDialogCustomStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/positive</item>
+
+
+    </style>
+
+    <style name="positive">
+
+
+        <item name="android:textColor">@color/colorPrimary</item>
+
+    </style>
+    
     <style name="FullscreenTheme" parent="AppTheme">
         <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
         <item name="android:windowActionBarOverlay">true</item>
@@ -53,6 +66,12 @@
 
     <style name="ChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
             <item name="android:textSize">14sp</item>
+        <item name="android:checked">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="chipBackgroundColor">@color/chip_color</item>
+        <item name="android:textColor">@color/chip_color_text</item>
+
     </style>
 
 </resources>

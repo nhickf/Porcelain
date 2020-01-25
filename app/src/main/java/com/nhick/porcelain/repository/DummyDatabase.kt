@@ -2,10 +2,11 @@ package com.nhick.porcelain.repository
 
 object DummyDatabase {
 
-    val listOfArticles get() = getDummyArticles()
+    val listOfArticles get() = dummyArticles()
+    val listOfBanner get() = dummyBanners()
 
 
-    private fun getDummyArticles() : ArrayList<Articles>{
+    private fun dummyArticles() : ArrayList<Articles>{
 
         val arrayList = ArrayList<Articles>()
 
@@ -41,6 +42,24 @@ object DummyDatabase {
             "21 JAN 2020",
             "https://www.bworldonline.com/wp-content/uploads/2018/07/PAL-071818.jpg"
         ))
+
+        return arrayList
+    }
+
+
+    private fun dummyBanners() : ArrayList<Banner>{
+        val arrayList = ArrayList<Banner>()
+
+        arrayList.add(
+            Banner("Weather updates for today","Expect showers Saturday Afternoon",
+            "Temperature and Relative Humidity " +
+                    "EXTREMES FOR THE 24-HOUR PERIOD ENDING AT 8:00 PM YESTERDAY " +
+                    "(Recorded at PAGASA Weather Station, Science Garden, Diliman, Quezon City)")
+        )
+        arrayList.add(Banner("Forecast Weather Conditions","Cloudy skies with isolated rainshowers",
+            "Possible flash floods or landslides during moderate to at times heavy rains"))
+        arrayList.add(Banner("Quezon City Weather Forecast"," Local time in Quezon City is 3:14:27 PM +08.",
+            "Quezon City Weather Forecast. Providing a local 3 hourly Quezon City weather forecast of rain, sun, wind, humidity and temperature. The Long-range 10 day forecast also includes detail for Quezon City weather today. Live weather reports from Quezon City weather stations and weather warnings that include risk of thunder, high UV index and forecast gales. See the links below the 10-day Quezon City weather forecast table for other cities and towns nearby along with weather conditions for local outdoor activities."))
 
 
 

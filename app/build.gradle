@@ -45,6 +45,11 @@ dependencies {
     implementation "com.google.android.material:material:$material"
 
     implementation 'com.hbb20:ccp:2.3.5'
+    implementation 'me.relex:circleindicator:2.1.4'
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    implementation "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.1.0"
 
     //Data-binding
     implementation "androidx.databinding:databinding-adapters:$dataBinding"

@@ -15,7 +15,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:keepScreenOn="true"
-        android:src="@mipmap/porcelain_logo"
+        android:src="@mipmap/porcelain_main"
         android:layout_marginStart="68dp"
         android:layout_marginEnd="67dp"
         app:layout_constraintStart_toStartOf="parent"
